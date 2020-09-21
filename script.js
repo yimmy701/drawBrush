@@ -17,8 +17,6 @@ function draw() {
   chooseColors();
   if (mouseIsPressed){
     ellipse(mouseX, mouseY,abs(pmouseY - mouseY),abs(pmouseX - mouseX))
-    // strokeWeight(abs(pmouseX - mouseX) + abs(pmouseY - mouseY));
-    // line(pmouseX, pmouseY, mouseX, mouseY);
   } 
 }
 
@@ -27,7 +25,7 @@ function chooseColors() {
   if (brushHue >= 360){
     brushHue = 0;
   }
-  // brushHue = (brushHue + 1)%360;
+ 
   stroke(brushHue, 50, 80);
   fill(brushHue, 50, 80);
 }
@@ -36,6 +34,3 @@ function keyPressed() {
   background(95);
 }
 
-// function mousePressed(){
-//   ellipse(random(width),random(height), random(50), random(50));
-// }
